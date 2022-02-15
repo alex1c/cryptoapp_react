@@ -14,6 +14,7 @@ const Exchanges = () => {
   const { data, isFetching } = useGetExchangesQuery();
   //const exchangesList = data?.data?.exchanges;
  // Note: To access this endpoint you need premium plan
+ console.log(data)
   if (isFetching) return <Loader />;
 
   return (

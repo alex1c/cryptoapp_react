@@ -15,6 +15,8 @@ const { Title } = Typography;
   const globalStats = data?.data?.stats;
 
   //if (isFetching) return <Loader />;
+  console.log(isFetching)
+  console.log(globalStats)
 
   return (
     <>
