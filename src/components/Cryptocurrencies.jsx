@@ -20,6 +20,12 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
+   //console.log('currency',cryptos)
+
+   /* function handlerCardClick(t) {
+    // console.log('card click', t)
+   } */
+
   if (isFetching) return <Loader />;
 
   return (
@@ -34,6 +40,7 @@ const Cryptocurrencies = ({ simplified }) => {
       )}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((currency) => (
+         
           <Col
             xs={24}
             sm={12}
@@ -48,7 +55,9 @@ const Cryptocurrencies = ({ simplified }) => {
                 title={`${currency.rank}. ${currency.name}`}
                 extra={<img className="crypto-image" src={currency.iconUrl} alt="crypto"/>}
                 hoverable
+               // onClick={(t)=>handlerCardClick(t.target)}
               >
+               
                 <p>Цена: {millify(currency.price)}</p>
                 <p>Рыночная капитализация: {millify(currency.marketCap)}</p>
                 <p>Дневное изменение: {currency.change}%</p>
