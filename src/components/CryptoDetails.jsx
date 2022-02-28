@@ -20,7 +20,7 @@ import {
   useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
 import Loader from "./Loader";
-import LineChart from "./LineChart";
+//import LineChart from "./LineChart";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -31,11 +31,11 @@ const CryptoDetails = () => {
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
   const { data: coinHistory } = useGetCryptoHistoryQuery({
     coinId,
-    timeperiod,
+     timeperiod, 
   });
   const cryptoDetails = data?.data?.coin;
 
-  /*  console.log('coinHistory----- ',) */
+    console.log('coinHistory----- ',) 
   // debugger
 
   if (isFetching) return <Loader />;

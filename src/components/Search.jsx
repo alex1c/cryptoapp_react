@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Input, Space, Row, Col, Card, Tooltip } from "antd";
 import { Link } from "react-router-dom";
-import { AudioOutlined, FallOutlined, RiseOutlined } from "@ant-design/icons";
+import {  FallOutlined, RiseOutlined } from "@ant-design/icons";
 import {
-  useGetGlobalStatsQuery,
+  
   useGetSearchQuery,
 } from "../services/cryptoApi";
 import Loader from "./Loader";
@@ -12,14 +12,14 @@ import millify from "millify";
 const { Search } = Input;
 //const onSearch = (value) => console.log(value);
 
-const suffix = (
+/* const suffix = (
   <AudioOutlined
     style={{
-      fontSize: 16,
-      color: "#1890ff",
+     // fontSize: 16,
+     // color: "#1890ff",
     }}
   />
-);
+); */
 
 const SearchPage = () => {
   //const count = simplified ? 10 : 100;
