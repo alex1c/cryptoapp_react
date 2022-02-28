@@ -26,15 +26,30 @@ export const cryptoApi = createApi({
     }),
 
     // Note: To access this endpoint you need premium plan
-    getExchanges: builder.query({
-      query: () => createRequest('/exchanges'),
+    getExchanges: builder.query({      
+      query: () => createRequest('/exchanges'),      
     }),
+    
+    //my request global stats
+    getGlobalStats: builder.query({
+      query: () => createRequest(`/stats`),
+    }),
+
+     //my request search 
+     getSearch: builder.query({
+      query: (searchString) => createRequest(`/search-suggestions?query=${searchString}`),//createRequest(`/search-suggestions?query=${searchString}`),aKzUVe4Hh_CON
+     
+    }),
+
   }),
 });
+//debugger;
 
 export const {
   useGetCryptosQuery,
   useGetCryptoDetailsQuery,
   useGetExchangesQuery,
   useGetCryptoHistoryQuery,
+  useGetGlobalStatsQuery,
+  useGetSearchQuery,
 } = cryptoApi;
