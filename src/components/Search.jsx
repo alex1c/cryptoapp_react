@@ -43,10 +43,14 @@ const SearchPage = () => {
 
   return (
     <div>
-      <Space direction="vertical">
+      <Space direction="horizontal">
         <Search
+        style={{ margin: 'auto',
+          width: '200%',
+          textAlign: 'center',
+          padding: '30px'}}
           placeholder="название или код крипты"
-          allowClear
+          allowClear          
           enterButton="Поиск"
           size="large"
           onSearch={(e) => setSearchTerm(e)} //setSearchTerm(e.target.value.toLowerCase())}
