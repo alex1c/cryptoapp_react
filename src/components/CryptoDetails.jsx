@@ -29,13 +29,13 @@ const CryptoDetails = () => {
   const { coinId } = useParams();
   const [timeperiod, setTimeperiod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
-  const { data: coinHistory } = useGetCryptoHistoryQuery({
+   const { data: coinHistory } = useGetCryptoHistoryQuery({
     coinId,
      timeperiod, 
-  });
+  }); 
   const cryptoDetails = data?.data?.coin;
 
-    console.log('coinHistory----- ',) 
+    console.log('coinHistory----- ',coinHistory) 
   // debugger
 
   if (isFetching) return <Loader />;

@@ -28,7 +28,7 @@ const Exchanges = () => {
         <Col span={6}>Изменение</Col>
       </Row>
       <Row>
-        <p>Данные доступны только по премиум подписке</p>
+        <h3>Данные доступны только по премиум подписке</h3>
       {/*   { (exchangesList.map((exchange) => (
           <Col span={24}>
             <Collapse>
